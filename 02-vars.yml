@@ -36,14 +36,13 @@
 - name: Register a variable
   hosts: localhost
   tasks:
-   - name: Get uptime output
-     ansible.builtin.shell: uptime
-     register: out
+    - name: Get uptime output
+      ansible.builtin.shell: uptime
+      register: out
 
-   - name: Print out
-     ansible.builtin.debug:
-     msg: "{{ out }}"
-
+    - name: Print out
+      ansible.builtin.debug:
+        msg: "{{ out }}"
 
 
 
